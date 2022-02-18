@@ -3,17 +3,20 @@ import "./App.css";
 import Cart from "./components/Cart";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Nav />
-        <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/cart" element={<Cart />}></Route>
-        </Routes>
-      </Router>
+      <CartProvider>
+        <Router>
+          <Nav />
+          <Routes>
+            <Route exact path="/" element={<Home />}></Route>
+            <Route exact path="/cart" element={<Cart />}></Route>
+          </Routes>
+        </Router>
+      </CartProvider>
     </div>
   );
 }

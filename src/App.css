@@ -12,7 +12,7 @@
   background-color: blue;
 }
 
-ul {
+.nav-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,4 +24,22 @@ a {
   text-decoration: none;
   color: white;
   cursor: pointer;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  margin: 20px 20px 20px 20px;
+  padding: 5px;
+  background-color: slategrey;
+  border-radius: 5px;
 }
